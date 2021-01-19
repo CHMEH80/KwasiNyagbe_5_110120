@@ -1,0 +1,16 @@
+section#listeProduit {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section#listeProduit h2 {
+  width: 100%;
+}
+
+article {
+  width: 50%;
+}
+
+article img {
+  width: 100%;
+}
