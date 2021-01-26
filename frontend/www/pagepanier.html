@@ -24,6 +24,9 @@
     <!-- éléments structurants -->
     <!-- <script src="js/dataManager.js"></script> -->
     <!-- <script src="js/main.js" defer></script> -->
+    
+    <script src="js/procedural/panier.js" defer></script>
+    
 
 </head>
 
@@ -49,8 +52,121 @@
         </header>
 
         <main>
-           
-        </main>
+            <section class="recapitulatif">
+              <h2>Récapitulatif de votre commande</h2>
+              <p>
+                Veuillez vérifier votre commande ci-dessous avant de valider le
+                paiement.
+              </p>
+              <div id="panier-recap">
+                <p id="panierVide">Votre panier est vide</p>
+              </div>
+            </section>
+            <section class="formulaire_commande">
+              <h2>Passer la commande de votre(vos) peluche(s)</h2>
+              <div class="cadre">
+                <form method="post" name="formContact" id="form_1">
+                  <div class="form-group">
+                    <label for="nom">
+                      Nom de famille
+                    </label>
+                    <input
+                      type="text"
+                      id="nom"
+                      name="nom"
+                      class="form-control"
+                      required
+                      autofocus
+                      placeholder="Renseignez votre nom de famille"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="prenom">
+                      Prénom
+                    </label>
+                    <input
+                      type="text"
+                      id="prenom"
+                      name="prenom"
+                      class="form-control"
+                      required
+                      placeholder="Renseignez votre prénom"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">
+                      Adresse email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      required
+                      placeholder="Entrez une adresse mail valide"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="adresse">
+                      Adresse postale et de facturation
+                    </label>
+                    <input
+                      type="text"
+                      id="adresse"
+                      name="adresse"
+                      class="form-control"
+                      required
+                      placeholder="Ex: 75 route de Paris"
+                    />
+                  </div>
+    
+                  <div class="form-group">
+                    <label for="ville">
+                      Ville
+                    </label>
+                    <input
+                      type="text"
+                      id="ville"
+                      name="ville"
+                      class="form-control"
+                      required
+                      placeholder="Ex: Paris"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>
+                      Choix du moyen de paiement
+                    </label>
+                    <div id="carte">
+                      <input
+                        type="radio"
+                        class="paiement"
+                        name="identifiant"
+                        value="Visa"
+                        checked
+                      /><i class="fab fa-cc-visa fa-2x"></i>
+                      <input
+                        type="radio"
+                        class="paiement"
+                        name="identifiant"
+                        value="Mastercard"
+                      /><i class="fab fa-cc-mastercard fa-2x"></i>
+                      <input
+                        type="radio"
+                        class="paiement"
+                        name="identifiant"
+                        value="Paypal"
+                      /><i class="fab fa-cc-paypal fa-2x"></i>
+                    </div>
+                  </div>
+    
+                  <button id="commander" type="submit" name="commander">
+                    Commander
+                  </button>
+                </form>
+              </div>
+            </section>
+          </main>
         <footer>
             <div class="footer">
          
@@ -59,6 +175,14 @@
             </div>
         </footer>
         <script src="js/main.js"></script>
+        <script>
+          nombreIndexPanier();
+        </script>
+        <script>
+        nombreProduitPanier(); 
+        </script>
+        
+       
     </div>
 </body>
 
