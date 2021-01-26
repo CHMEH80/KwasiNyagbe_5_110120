@@ -1,16 +1,64 @@
-section#listeProduit {
-  display: flex;
-  flex-wrap: wrap;
-}
 
 section#listeProduit h2 {
   width: 100%;
 }
 
+section#listeProduit a, p, h3 {
+  margin-left: 1rem;
+}
+section#listeProduit a{
+   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    background: linear-gradient(172deg, #ff79da 21%, #A58B35 79%);
+    color: #fff;
+    border: none;
+    width: 50%;
+    height: 3rem;
+    border-radius: .2rem .2rem;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 2s;
+    left: 10rem;
+    bottom: 2rem;
+    text-decoration: none;
+    padding: .3rem;
+}
+
 article {
-  width: 50%;
+  width: 100%;
+  margin-bottom: 2rem;
+  box-shadow: 2px 1px 5px 2px #d1d1d1;
 }
 
 article img {
   width: 100%;
+}
+
+/* Section Fiche produit */
+
+
+section#detailProduit{
+  width: 100%;
+  margin-bottom: 2rem;
+  box-shadow: 2px 1px 5px 2px #d1d1d1;
+}
+
+section#detailProduit img{
+  width: 100%;
+}
+
+select#choix_option {
+  margin-left: 1rem;
+}
+
+button{
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+  background: linear-gradient(172deg, #ff79da 21%, #A58B35 79%);
+  color: #fff;
+  border: none;
+  height: 1.5rem;
+  border-radius: .2rem .2rem;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  margin: 1rem;
 }
