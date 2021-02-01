@@ -1,0 +1,6 @@
+
+detailTeddies();
+
+ajoutPanier();
+
+nombreProduitPanier();

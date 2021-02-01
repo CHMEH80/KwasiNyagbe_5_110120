@@ -32,4 +32,6 @@ function recupPanier(){
   };
 }
 
-panier.actualise(["&é","lkjkljklj"])
+// panier.actualise(["&é","lkjkljklj"])
+
+

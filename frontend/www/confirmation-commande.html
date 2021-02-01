@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
@@ -15,8 +16,10 @@
     <meta property="og:site_name" content="Orinoco" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/breakPoints.css" />
+    <script src="js/main.js"></script>
     <title>Ours en peluche faits à la main- Orinoco</title>
-   
+
+    <!-- <script src="js/procedural/panier.js"></script> -->
 
     <!-- composants -->
     <!-- <script src="js/components/article.js"></script> -->
@@ -27,9 +30,7 @@
 
     <!-- éléments structurants -->
     <!-- <script src="js/dataManager.js"></script> -->
-    <!-- <script src="js/procedural/panier.js" defer></script> -->
     <!-- <script src="js/main.js" defer></script> -->
-  
 
 </head>
 
@@ -38,15 +39,13 @@
         <header>
             <div class="header">
                 <div>
-                    <a href="index.html" id="Accueil"><img src="img/logo-orinoco.png" alt="Logo Orinoco" /></a>
+                    <a href="index.html" id="Accueil"><img src="" alt="Logo Orinoco" /></a>
                 </div>
                 <nav>
                     <div class="header-lien">
                         <ul class="header-navigation">
                             <li class="nav-item">
-                                <a class="nav-link" href="pagepanier.html"><i
-                                        class="fas fa-shopping-basket"></i>Panier (<span
-                                        id="indexPanier"></span>)</a>
+                                <a class="nav-link" href="index.html">Accueil</a>
                             </li>
                         </ul>
                     </div>
@@ -55,38 +54,38 @@
         </header>
 
         <main>
-            <section class="banniere-presentation">
-                <h1 class="orinoco_peluches">
-                    Vente en ligne d'ours en peluche à la main
-                </h1>
-            </section>
+            <section class="confirmation">
+                <h2>Confirmation de votre commande</h2>
+                <p class="textConfirm">Bonjour <span id="firstName"></span>,</p>
+                <p class="textConfirm">
+                    Nous vous remercions pour votre achat. Nous allons désormais tout mettre en oeuvre pour que vous receviez 
+                    votre commande le plus rapidement possible.
+                    N’hésitez pas à nous contacter à l’adresse <span id="adress-email-onorico">contact@orinoco.com</span>
+                </p>
+                <p class="textConfirm">
+                    Votre N° de commande est :
+                </p>
+                <p id="orderId"></p>
+                <p class="textConfirm">
+                    Ce numéro est nécessaire pour toute question concernant votre commande.
+                </p>
+                <p class="textConfirm">Nous vous remercions de votre fidélité et à très bientôt.</p>
+                <p class="textConfirm">L'équipe d'Orinoco</p>
 
-            <section id="detailProduit">
-                <div id="detailOption">
-                  <p>Choisissez votre couleur :</p>
-                  <select
-                    name="option"
-                    id="choix_option"
-                    required
-                    aria-invalid="false"
-                  >
-                    <option disabled value="" selected>Choix couleur</option>
-                  </select>
+                <p class="textConfirm">Ci-dessous le détail de votre commande :</p>
+            </section>
+            <section class="recapitulatif">
+                <h2>Détail de la commande</h2>
+                <div id="confirmation-recap"></div>
+                <div class="retourAccueil">
+                    <a href="index.html">Retourner à l'accueil</a>
                 </div>
-      
-                <button id="ajout_panier">Ajouter au panier</button>
-              </section>
+            </section>
         </main>
+
         <footer>
             <div class="footer">
                 <p>Copyright © 2021 Orinoco - Tous droits réservés</p>
                 <p>Developpeur Web - OpenClassrooms</p>
             </div>
         </footer>
-        <script src="js/main.js"></script>
-        <script src="js/ficheProduit.js"></script>
-      
-    </div>
-</body>
-
-</html>
