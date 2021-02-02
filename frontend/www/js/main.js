@@ -136,9 +136,18 @@ async function teddies() {
   }
 
 //-----PANIER----------//
+let panier;
 
-//Panier de l'utilisateur
-let panier = JSON.parse(localStorage.getItem("panier"));
+//Vérification et initialisation du panier
+
+if (localStorage.getItem("panier")) {
+  panier = JSON.parse(localStorage.getItem("panier"));
+} else {
+  console.log("Le panier va être initalisé");
+  panier = [];
+  localStorage.setItem("panier", JSON.stringify(panier));
+}
+
 nombreIndexPanier();
 
 //Affichage du nombre d'article dans le panier
@@ -148,18 +157,8 @@ function nombreIndexPanier() {
 }
 
 function nombreProduitPanier() {
-  let produitPanier = document.getElementById("produitPanier");
+  let produitPanier = document.getElementById("indexPanier");
   produitPanier.textContent = panier.length;
-}
-
-//Vérification et initialisation du panier
-
-if (localStorage.getItem("panier")) {
-  console.log(panier);
-} else {
-  console.log("Le panier va être initalisé");
-  let panierInit = [];
-  localStorage.setItem("panier", JSON.stringify(panierInit));
 }
 
 //Ajout de l'article au panier de l'utilisateur

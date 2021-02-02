@@ -10,14 +10,23 @@ formulaire.addEventListener("submit", function (e) {
 
   /* Envoi à l'API */
   // Tableau et objet demandé par l'API pour la commande
-  let contact;
+  const contact = {
+    "address"   : document.getElementById("adresse").value,
+    "city"      : document.getElementById("ville").value,
+    "email"     : document.getElementById("email").value,
+    "lastName"  : document.getElementById("nom").value,
+    'firstName' : document.getElementById("prenom").value,
+  };
   let products = [];
 
   let request = new XMLHttpRequest();
   request.onload = function () {
     console.log("retour requete AJAX");
     if (this.readyState == XMLHttpRequest.DONE && this.status == 201) {
-      console.log("SUCCES AJAX");
+      const data = JSON.parse(this.response);
+      // console.log(data.orderId);
+      // console.log("SUCCES AJAX");
+      window.location.href = "./confirmation-commande.html?"+data.orderId;
     } else {
       console.log("ECHEC AJAX");
     }
@@ -26,7 +35,7 @@ formulaire.addEventListener("submit", function (e) {
   request.setRequestHeader("Content-Type", "application/json");
 
   // TODO: Construire le "payLoad" avec l'adresse, l'ID des produits à acheter etc. (voir la méthode "orderTeddies" dans backend/controllers/teddy.js)
-  request.send();
+  request.send(JSON.stringify({"contact": contact, "products": products}));
 
 });
 

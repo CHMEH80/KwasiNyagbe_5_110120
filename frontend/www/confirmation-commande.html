@@ -16,7 +16,9 @@
     <meta property="og:site_name" content="Orinoco" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/breakPoints.css" />
-    <script src="js/main.js"></script>
+    <script src="js/confirmation.js" defer></script>
+    <script src="js/main.js" defer></script>
+
     <title>Ours en peluche faits à la main- Orinoco</title>
 
     <!-- <script src="js/procedural/panier.js"></script> -->
@@ -36,22 +38,24 @@
 
 <body>
     <div class="page-container">
-        <header>
-            <div class="header">
-                <div>
-                    <a href="index.html" id="Accueil"><img src="" alt="Logo Orinoco" /></a>
-                </div>
-                <nav>
-                    <div class="header-lien">
-                        <ul class="header-navigation">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Accueil</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+      <header>
+        <div class="header">
+            <div>
+                <a href="index.html" id="Accueil"><img src="img/logo-orinoco.png" alt="Logo Orinoco" /></a>
             </div>
-        </header>
+            <nav>
+                <div class="header-lien">
+                    <ul class="header-navigation">
+                        <li class="nav-item">
+                            <a class="nav-link" href="pagepanier.html"><i
+                                    class="fas fa-shopping-basket"></i>Panier (<span
+                                    id="indexPanier"></span>)</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
 
         <main>
             <section class="confirmation">
@@ -63,7 +67,7 @@
                     N’hésitez pas à nous contacter à l’adresse <span id="adress-email-onorico">contact@orinoco.com</span>
                 </p>
                 <p class="textConfirm">
-                    Votre N° de commande est :
+                    Votre N° de commande est : <span id="idArea"></span>
                 </p>
                 <p id="orderId"></p>
                 <p class="textConfirm">
