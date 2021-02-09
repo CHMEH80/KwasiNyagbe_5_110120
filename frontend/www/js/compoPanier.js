@@ -25,19 +25,19 @@ function nombreProduitPanier() {
 }
 
 
-  ajoutPanier = () => {
-    let acheter = document.getElementById("ajout_panier");
-    acheter.addEventListener("click", async function () {
-      const ajout = await getAllTeddies();
-      panier.push(ajout);
-      localStorage.setItem("panier", JSON.stringify(panier));
-      console.log("Le produit a été ajouté au panier");
-      alert("Cet article a été ajouté dans votre panier");
-      location.reload();
-    });
-  };
+ajoutPanier = () => {
+  let acheter = document.getElementById("ajout_panier");
+  acheter.addEventListener("click", async function () {
+    const ajout = await getAllTeddies();
+    panier.push(ajout);
+    localStorage.setItem("panier", JSON.stringify(panier));
+    console.log("Le produit a été ajouté au panier");
+    alert("Cet article a été ajouté dans votre panier");
+    location.reload();
+  });
+};
 
-  //------Page Panier-------//
+//------Page Panier-------//
 
 panierCreation = () => {
   if (panier.length > 0) {
@@ -63,18 +63,18 @@ panierCreation = () => {
     ligneTableau.appendChild(recapPrixUnitaire);
     ligneTableau.appendChild(recapRemove);
 
-    //contenu des entetes
+    //contenu des entêtes du tableau
     recapPhoto.textContent = "Article";
     recapNom.textContent = "Nom";
     recapPrixUnitaire.textContent = "Prix";
     recapRemove.textContent = "Annuler ?";
 
-  
-    
- //Boucle FOR pour affichage des articles dans le panier
-     
-    for (let i = 0; i<panier.length; i++) {
-    
+
+
+    //Boucle FOR pour affichage des articles dans le panier
+
+    for (let i = 0; i < panier.length; i++) {
+
       //Création des lignes du tableau
 
       let ligneArticle = document.createElement("tr");
@@ -95,15 +95,15 @@ panierCreation = () => {
       removeArticle.setAttribute("title", "Supprimer article ?");
 
       console.log(i);
-      
-      
 
 
-//Supprimer un produit du panier
-   removeArticle.addEventListener("click", (event) => {this.annulerArticle(i);})
-   
-        
-      
+
+
+      //Supprimer un produit du panier
+      removeArticle.addEventListener("click", (event) => { this.annulerArticle(i); })
+
+
+
 
       //Agencement de la structure HTML
       recap.appendChild(ligneArticle);
@@ -118,7 +118,7 @@ panierCreation = () => {
       nomArticle.textContent = panier[i].name;
       prixUnitArticle.textContent = panier[i].price / 100 + " €";
       console.log(panier[i].name);
-      
+
 
     };
 
@@ -144,22 +144,22 @@ panierCreation = () => {
     //Affichage du prix total à payer dans l'addition
     console.log(sommeTotal);
     document.getElementById("sommeTotal").textContent = sommeTotal + " €";
-    
+
     return sommeTotal;
   }
 };
 
 annulerArticle = (i) => {
   panier.splice(i, 1);
-   localStorage.clear();
-   // Mise à jour du nouveau panier avec suppression de l'article
-   localStorage.setItem("panier", JSON.stringify(panier));
-   //Mise à jour de la page pour affichage de la suppression au client
-   window.location.reload();
- };  
- 
+  localStorage.clear();
+  // Mise à jour du nouveau panier avec suppression de l'article
+  localStorage.setItem("panier", JSON.stringify(panier));
+  //Mise à jour de la page pour affichage de la suppression au client
+  window.location.reload();
+};
 
- /* CONSTRUCTION DU FORMULAIRE */
+
+/* CONSTRUCTION DU FORMULAIRE */
 
 //vérification les inputs du formulaire
 checkInput = () => {
@@ -238,13 +238,13 @@ checkInput = () => {
     return contact;
   }
 };
- 
+
 //Vérification du panier
 checkPanier = () => {
   //Vérification que le panier contient au moins un produit
   let etatPanier = JSON.parse(localStorage.getItem("panier"));
   //Si le panier est vide ou null
-  if  (etatPanier.length < 1 || etatPanier == null) {
+  if (etatPanier.length < 1 || etatPanier == null) {
     alert("Votre panier est vide");
     return false;
   } else {
