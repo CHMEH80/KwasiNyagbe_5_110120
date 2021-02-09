@@ -1,13 +1,12 @@
- /* Éléments généraux de la page */
+/* Éléments généraux de la page */
 
- body{
-  font-family: 'Raleway', sans-serif;
- }
+body {
+  font-family: "Raleway", sans-serif;
+}
 
+/* Header */
 
- /* Header */
-
- .header {
+.header {
   display: flex;
 }
 
@@ -20,13 +19,13 @@ ul.header-navigation {
 }
 
 a.nav-link {
-  border: solid 1.2px #A58B35;
+  border: solid 1.2px #a58b35;
   padding: 4px;
   border-radius: 2rem;
   background-color: #f8f8f8;
 }
 
-nav a{
+nav a {
   text-decoration: none;
 }
 
@@ -38,24 +37,26 @@ h1.orinoco_peluches {
   text-align: center;
 }
 
-section#listeProduit a, p, h3 {
+section#listeProduit a,
+p,
+h3 {
   margin-left: 1rem;
 }
-section#listeProduit a{
-   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
-    background: linear-gradient(172deg, #ff79da 21%, #A58B35 79%);
-    color: #fff;
-    border: none;
-    width: 50%;
-    height: 3rem;
-    border-radius: .2rem .2rem;
-    cursor: pointer;
-    position: relative;
-    transition-duration: 2s;
-    left: 10rem;
-    bottom: 2rem;
-    text-decoration: none;
-    padding: .3rem;
+section#listeProduit a {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+  background: linear-gradient(172deg, #ff79da 21%, #a58b35 79%);
+  color: #fff;
+  border: none;
+  width: 50%;
+  height: 3rem;
+  border-radius: 0.2rem 0.2rem;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 2s;
+  left: 10rem;
+  bottom: 2rem;
+  text-decoration: none;
+  padding: 0.3rem;
 }
 
 article {
@@ -70,14 +71,13 @@ article img {
 
 /* Section Fiche produit */
 
-
-section#detailProduit{
+section#detailProduit {
   width: 100%;
   margin-bottom: 2rem;
   box-shadow: 2px 1px 5px 2px #d1d1d1;
 }
 
-section#detailProduit img{
+section#detailProduit img {
   width: 100%;
 }
 
@@ -85,19 +85,18 @@ select#choix_option {
   margin-left: 1rem;
 }
 
-button{
+button {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
-  background: linear-gradient(172deg, #ff79da 21%, #A58B35 79%);
+  background: linear-gradient(172deg, #ff79da 21%, #a58b35 79%);
   color: #fff;
   border: none;
   height: 1.5rem;
-  border-radius: .2rem .2rem;
+  border-radius: 0.2rem 0.2rem;
   cursor: pointer;
   position: relative;
   text-decoration: none;
   margin: 1rem;
 }
-
 
 main .detail_contenant .detail_information_prix .detail_prix {
   font-size: 1.6rem;
@@ -107,11 +106,13 @@ main .detail_contenant .detail_information_prix .detail_prix {
   text-align: center;
 }
 
-.produit_nom, .produit_prix {
+.produit_nom,
+.produit_prix {
   width: 30%;
 }
 
-#choix_option, #ajout_panier {
+#choix_option,
+#ajout_panier {
   margin-bottom: 1rem;
   width: 95%;
 }
@@ -122,7 +123,6 @@ main .detail_contenant .detail_information_prix .detail_prix {
 #ajout_panier:hover {
   cursor: pointer;
 }
-
 
 /* CSS Page panier */
 
@@ -144,7 +144,8 @@ table {
   width: 67%;
 }
 
-.formulaire_commande, .recapitulatif {
+.formulaire_commande,
+.recapitulatif {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -177,7 +178,7 @@ table {
 
 form {
   width: auto;
-  border: 1px solid #ff79da ;
+  border: 1px solid #ff79da;
   margin-bottom: 3rem;
   background-color: #f8f8f8;
 }
@@ -214,7 +215,8 @@ input:focus:invalid {
   margin: auto;
 }
 
-#panier-recap, #confirmation-recap {
+#panier-recap,
+#confirmation-recap {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -223,13 +225,13 @@ input:focus:invalid {
   align-content: center;
   vertical-align: middle;
   background-color: #f8f8f8;
-  /* border-top: 1px solid #835038;
-  border-bottom: 1px solid #835038; */
 }
 
-#colonneTotal, #sommeTotal, #colonneConfirmTotal, #sommeConfirmTotal {
+#colonneTotal,
+#sommeTotal,
+#colonneConfirmTotal,
+#sommeConfirmTotal {
   border-top: 1px solid #ff79da;
-  /* background-color: #f5e6c6; */
   font-size: 1.2rem;
 }
 
@@ -241,8 +243,8 @@ input:focus:invalid {
   width: 7rem;
 }
 
-
-td, th{
+td,
+th {
   font-size: 1.2rem;
   background-color: #f8f8f8;
 }
@@ -253,10 +255,6 @@ td, th{
 
 .textConfirm {
   font-size: 1.3rem;
-}
-
-#orderId {
-  color: #0bb30b;
 }
 
 .footer {

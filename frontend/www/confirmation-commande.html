@@ -18,69 +18,42 @@
     <link rel="stylesheet" type="text/css" href="./css/breakPoints.css" />
     <script src="js/confirmation.js" defer></script>
     <script src="js/main.js" defer></script>
-
     <title>Ours en peluche faits à la main- Orinoco</title>
-
-    <!-- <script src="js/procedural/panier.js"></script> -->
-
-    <!-- composants -->
-    <!-- <script src="js/components/article.js"></script> -->
-
-    <!-- pages -->
-    <!-- <script src="js/pages/listeProduits.js"></script> -->
-    <!-- <script src="js/pages/ficheProduit.js"></script> -->
-
-    <!-- éléments structurants -->
-    <!-- <script src="js/dataManager.js"></script> -->
-    <!-- <script src="js/main.js" defer></script> -->
-
 </head>
 
 <body>
     <div class="page-container">
-      <header>
-        <div class="header">
-            <div>
-                <a href="index.html" id="Accueil"><img src="img/logo-orinoco.png" alt="Logo Orinoco" /></a>
-            </div>
-            <nav>
-                <div class="header-lien">
-                    <ul class="header-navigation">
-                        <li class="nav-item">
-                            <a class="nav-link" href="pagepanier.html"><i
-                                    class="fas fa-shopping-basket"></i>Panier (<span
-                                    id="indexPanier"></span>)</a>
-                        </li>
-                    </ul>
+        <header>
+            <div class="header">
+                <div>
+                    <a href="index.html" id="Accueil"><img src="img/logo-orinoco.png" alt="Logo Orinoco" /></a>
                 </div>
-            </nav>
-        </div>
-    </header>
+                <nav>
+                    <div class="header-lien">
+                        <ul class="header-navigation">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pagepanier.html"><i class="fas fa-shopping-basket"></i>Panier
+                                    (<span id="indexPanier"></span>)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
 
         <main>
             <section class="confirmation">
                 <h2>Confirmation de votre commande</h2>
                 <p class="textConfirm">Bonjour <span id="firstName"></span>,</p>
                 <p class="textConfirm">
-                    Nous vous remercions pour votre achat. Nous allons désormais tout mettre en oeuvre pour que vous receviez 
-                    votre commande le plus rapidement possible.
-                    N’hésitez pas à nous contacter à l’adresse <span id="adress-email-onorico">contact@orinoco.com</span>
+                    Nous vous remercions pour votre achat.
                 </p>
                 <p class="textConfirm">
                     Votre N° de commande est : <span id="idArea"></span>
                 </p>
-                <p id="orderId"></p>
-                <p class="textConfirm">
-                    Ce numéro est nécessaire pour toute question concernant votre commande.
-                </p>
-                <p class="textConfirm">Nous vous remercions de votre fidélité et à très bientôt.</p>
-                <p class="textConfirm">L'équipe d'Orinoco</p>
-
-                <p class="textConfirm">Ci-dessous le détail de votre commande :</p>
+                <p class="textConfirm"> Le montant de votre commande est de : <span id="montant"></span></p>
             </section>
             <section class="recapitulatif">
-                <h2>Détail de la commande</h2>
-                <div id="confirmation-recap"></div>
                 <div class="retourAccueil">
                     <a href="index.html">Retourner à l'accueil</a>
                 </div>

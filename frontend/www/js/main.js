@@ -1,12 +1,4 @@
-// const dataManager = new DataManager("http://localhost:3000/api/teddies")
 
-// new ListeProduits(document.getElementById("listeProduit"));
-
-// new FicheProduit("5be9c8541c9d440000665243",document.getElementById("listeProduit"));
-// new FicheProduit("5beaa8bf1c9d440000a57d94",document.getElementById("listeProduit"));
-// new FicheProduit("5beaaa8f1c9d440000a57d95",document.getElementById("listeProduit"));
-// new FicheProduit("5beaabe91c9d440000a57d96",document.getElementById("listeProduit"));
-// new FicheProduit("5beaacd41c9d440000a57d97",document.getElementById("listeProduit"));
 
 /*Lien avec l'API */
 
@@ -24,7 +16,7 @@ getAllTeddies = () => {
         } else {
         }
       };
-      request.open("GET", "http://localhost:3000/api/teddies/" + idNounours);
+      request.open("GET", "http://localhost:3000/api/teddies/" + idPeluches);
       request.send();
     });
   };
@@ -75,9 +67,9 @@ async function teddies() {
 
   
   
-  let idNounours = "";
+  let idPeluches = "";
   async function detailTeddies() {
-    idNounours = location.search.substring(4);
+    idPeluches = location.search.substring(4);
     const detailTeddies = await getAllTeddies();
     console.log("Administration : Vous regardez la page du produit id_"+detailTeddies._id);
   
@@ -161,8 +153,6 @@ function nombreProduitPanier() {
   produitPanier.textContent = panier.length;
 }
 
-//Ajout de l'article au panier de l'utilisateur
-
 
   ajoutPanier = () => {
     let acheter = document.getElementById("ajout_panier");
@@ -222,7 +212,7 @@ panierCreation = () => {
       let prixUnitArticle = document.createElement("td");
       let supprimerArticle = document.createElement("td");
       let removeArticle = document.createElement("i");
-      removeArticle.textContent = "supprimer";
+      removeArticle.textContent = "";
 
       //Attribution des class ou Id
       ligneArticle.setAttribute("id", "article" + [i]);
@@ -283,6 +273,8 @@ panierCreation = () => {
     //Affichage du prix total à payer dans l'addition
     console.log(sommeTotal);
     document.getElementById("sommeTotal").textContent = sommeTotal + " €";
+    
+    return sommeTotal;
   }
 };
 
@@ -385,7 +377,7 @@ checkPanier = () => {
     alert("Votre panier est vide");
     return false;
   } else {
-    console.log("Le panier n'est pas vide");
+    console.log("Votre panier n'est pas vide");
     return true;
   }
 };

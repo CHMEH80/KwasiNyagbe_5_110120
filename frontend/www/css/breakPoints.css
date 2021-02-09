@@ -7,9 +7,6 @@
     section#listeProduit a {
         left: 35rem;
     }
-    /* section#listeProduit a, p, h3 {
-        margin-left: initial;
-    } */
     
     .formulaire_commande, .recapitulatif {
         width: 100%;

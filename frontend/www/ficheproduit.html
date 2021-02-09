@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
@@ -16,21 +17,7 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/breakPoints.css" />
     <title>Ours en peluche faits à la main- Orinoco</title>
-   
-
-    <!-- composants -->
-    <!-- <script src="js/components/article.js"></script> -->
-
-    <!-- pages -->
-    <!-- <script src="js/pages/listeProduits.js"></script> -->
-    <!-- <script src="js/pages/ficheProduit.js"></script> -->
-
-    <!-- éléments structurants -->
-    <!-- <script src="js/dataManager.js"></script> -->
-    <!-- <script src="js/procedural/panier.js" defer></script> -->
-    <!-- <script src="js/main.js" defer></script> -->
-  
-
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -44,9 +31,8 @@
                     <div class="header-lien">
                         <ul class="header-navigation">
                             <li class="nav-item">
-                                <a class="nav-link" href="pagepanier.html"><i
-                                        class="fas fa-shopping-basket"></i>Panier (<span
-                                        id="indexPanier"></span>)</a>
+                                <a class="nav-link" href="pagepanier.html"><i class="fas fa-shopping-basket"></i>Panier
+                                    (<span id="indexPanier"></span>)</a>
                             </li>
                         </ul>
                     </div>
@@ -63,19 +49,14 @@
 
             <section id="detailProduit">
                 <div id="detailOption">
-                  <p>Choisissez votre couleur :</p>
-                  <select
-                    name="option"
-                    id="choix_option"
-                    required
-                    aria-invalid="false"
-                  >
-                    <option disabled value="" selected>Choix couleur</option>
-                  </select>
+                    <p>Choisissez votre couleur :</p>
+                    <select name="option" id="choix_option" required aria-invalid="false">
+                        <option disabled value="" selected>Choix couleur</option>
+                    </select>
                 </div>
-      
+
                 <button id="ajout_panier">Ajouter au panier</button>
-              </section>
+            </section>
         </main>
         <footer>
             <div class="footer">
@@ -85,7 +66,6 @@
         </footer>
         <script src="js/main.js"></script>
         <script src="js/ficheProduit.js"></script>
-      
     </div>
 </body>
 

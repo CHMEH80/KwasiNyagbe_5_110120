@@ -1,193 +1,142 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap" rel="stylesheet" />
-    <meta name="description" content="Vente en ligne d'ours en peluche Ours faits à la main made in Frane." />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="robots" content="all" />
-    <meta property="og:title" content="Ours en peluche faits à la  main - Orinoco" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:description" content="Vente en ligne d'ours en peluche faits à la main made in Frane." />
-    <meta property="og:site_name" content="Orinoco" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <link rel="stylesheet" type="text/css" href="./css/breakPoints.css" />
-    <title>Ours en peluche faits à la main- Orinoco</title>
-   
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap" rel="stylesheet" />
+  <meta name="description" content="Vente en ligne d'ours en peluche Ours faits à la main made in Frane." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="robots" content="all" />
+  <meta property="og:title" content="Ours en peluche faits à la  main - Orinoco" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:description" content="Vente en ligne d'ours en peluche faits à la main made in Frane." />
+  <meta property="og:site_name" content="Orinoco" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  <link rel="stylesheet" type="text/css" href="./css/breakPoints.css" />
+  <title>Ours en peluche faits à la main- Orinoco</title>
 
-    <!-- composants -->
-    <!-- <script src="js/components/article.js"></script> -->
 
-    <!-- pages -->
-    <!-- <script src="js/pages/listeProduits.js"></script> -->
-    <!-- <script src="js/pages/ficheProduit.js"></script> -->
+  <!-- composants -->
+  <!-- <script src="js/components/article.js"></script> -->
 
-    <!-- éléments structurants -->
-    <!-- <script src="js/dataManager.js"></script> -->
-    <!-- <script src="js/main.js" defer></script> -->
-    
-    <!-- <script src="js/procedural/panier.js" defer></script> -->
+  <!-- pages -->
+  <!-- <script src="js/pages/listeProduits.js"></script> -->
+  <!-- <script src="js/pages/ficheProduit.js"></script> -->
+
+  <!-- éléments structurants -->
+  <!-- <script src="js/dataManager.js"></script> -->
+  <!-- <script src="js/main.js" defer></script> -->
+
+  <!-- <script src="js/procedural/panier.js" defer></script> -->
 
 
 </head>
 
 <body>
-    <div class="page-container">
-        <header>
-            <div class="header">
-                <div>
-                    <a href="index.html" id="Accueil"><img src="img/logo-orinoco.png" alt="Logo Orinoco" /></a>
-                </div>
-                <nav>
-                    <div class="header-lien">
-                        <ul class="header-navigation">
-                            <li class="nav-item">
-                                <a class="nav-link" href="pagepanier.html"><i
-                                        class="fas fa-shopping-basket"></i>Panier (<span
-                                        id="indexPanier"></span>)</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </header>
+  <div class="page-container">
+    <header>
+      <div class="header">
+        <div>
+          <a href="index.html" id="Accueil"><img src="img/logo-orinoco.png" alt="Logo Orinoco" /></a>
+        </div>
+        <nav>
+          <div class="header-lien">
+            <ul class="header-navigation">
+              <li class="nav-item">
+                <a class="nav-link" href="pagepanier.html"><i class="fas fa-shopping-basket"></i>Panier (<span
+                    id="indexPanier"></span>)</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-        <main>
-            <section class="recapitulatif">
-              <h2>Récapitulatif de votre commande</h2>
-              <p>
-                Veuillez vérifier votre commande ci-dessous avant de valider le
-                paiement.
-              </p>
-              <div id="panier-recap">
-                <p id="panierVide">Votre panier est vide</p>
-              </div>
-            </section>
-            <section class="formulaire_commande">
-              <h2>Merci de passer votre commande</h2>
-              <div class="cadre">
-                <form method="post" name="formContact" id="form_1">
-                  <div class="form-group">
-                    <label for="nom">
-                      Nom de famille
-                    </label>
-                    <input
-                      type="text"
-                      id="nom"
-                      name="nom"
-                      class="form-control"
-                      required
-                      autofocus
-                      placeholder="Renseignez votre nom de famille"
-                      value="NG"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="prenom">
-                      Prénom
-                    </label>
-                    <input
-                      type="text"
-                      id="prenom"
-                      name="prenom"
-                      class="form-control"
-                      required
-                      placeholder="Renseignez votre prénom"
-                      value="Kwasi"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="email">
-                      Adresse email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      class="form-control"
-                      required
-                      placeholder="Entrez une adresse mail valide"
-                      value="gcn5780@gmail.com"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="adresse">
-                      Adresse postale et de facturation
-                    </label>
-                    <input
-                      type="text"
-                      id="adresse"
-                      name="adresse"
-                      class="form-control"
-                      required
-                      placeholder="Ex: 75 route de Paris"
-                      value="29, rue Pierre Paris"
-                    />
-                  </div>
-    
-                  <div class="form-group">
-                    <label for="ville">
-                      Ville
-                    </label>
-                    <input
-                      type="text"
-                      id="ville"
-                      name="ville"
-                      class="form-control"
-                      required
-                      placeholder="Ex: Paris"
-                      value="75008"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>
-                      Choix du moyen de paiement
-                    </label>
-                    <div id="carte">
-                      <input
-                        type="radio"
-                        class="paiement"
-                        name="identifiant"
-                        value="Visa"
-                        checked
-                      /><i class="fab fa-cc-visa fa-2x"></i>
-                      <input
-                        type="radio"
-                        class="paiement"
-                        name="identifiant"
-                        value="Mastercard"
-                      /><i class="fab fa-cc-mastercard fa-2x"></i>
-                      <input
-                        type="radio"
-                        class="paiement"
-                        name="identifiant"
-                        value="Paypal"
-                      /><i class="fab fa-cc-paypal fa-2x"></i>
-                    </div>
-                  </div>
-    
-                  <button id="commander" type="submit" name="commander">
-                    Commander
-                  </button>
-                </form>
-              </div>
-            </section>
-          </main>
-        <footer>
-            <div class="footer">
-         
-                <p>Copyright © 2021 Orinoco - Tous droits réservés</p>
-                <p>Developpeur Web - OpenClassrooms</p>
+    <main>
+      <section class="recapitulatif">
+        <h2>Récapitulatif de votre commande</h2>
+        <p>
+          Veuillez vérifier votre commande ci-dessous avant de valider le
+          paiement.
+        </p>
+        <div id="panier-recap">
+          <p id="panierVide">Votre panier est vide</p>
+        </div>
+      </section>
+      <section class="formulaire_commande">
+        <h2>Merci de passer votre commande</h2>
+        <div class="cadre">
+          <form method="post" name="formContact" id="form_1">
+            <div class="form-group">
+              <label for="nom">
+                Nom de famille
+              </label>
+              <input type="text" id="nom" name="nom" class="form-control" required autofocus
+                placeholder="Renseignez votre nom de famille" value="NG" />
             </div>
-        </footer>
-        <script src="js/main.js"></script>
-        <script src="js/pagePanier.js"></script>
-      
-       
-    </div>
+            <div class="form-group">
+              <label for="prenom">
+                Prénom
+              </label>
+              <input type="text" id="prenom" name="prenom" class="form-control" required
+                placeholder="Renseignez votre prénom" value="Kwasi" />
+            </div>
+            <div class="form-group">
+              <label for="email">
+                Adresse email
+              </label>
+              <input type="email" id="email" name="email" class="form-control" required
+                placeholder="Entrez une adresse mail valide" value="gcn5780@gmail.com" />
+            </div>
+            <div class="form-group">
+              <label for="adresse">
+                Adresse postale et de facturation
+              </label>
+              <input type="text" id="adresse" name="adresse" class="form-control" required
+                placeholder="Ex: 75 route de Paris" value="29, rue Pierre Paris" />
+            </div>
+
+            <div class="form-group">
+              <label for="ville">
+                Ville
+              </label>
+              <input type="text" id="ville" name="ville" class="form-control" required placeholder="Ex: Paris"
+                value="75008" />
+            </div>
+            <div class="form-group">
+              <label>
+                Choix du moyen de paiement
+              </label>
+              <div id="carte">
+                <input type="radio" class="paiement" name="identifiant" value="Visa" checked /><i
+                  class="fab fa-cc-visa fa-2x"></i>
+                <input type="radio" class="paiement" name="identifiant" value="Mastercard" /><i
+                  class="fab fa-cc-mastercard fa-2x"></i>
+                <input type="radio" class="paiement" name="identifiant" value="Paypal" /><i
+                  class="fab fa-cc-paypal fa-2x"></i>
+              </div>
+            </div>
+
+            <button id="commander" type="submit" name="commander">
+              Commander
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+
+        <p>Copyright © 2021 Orinoco - Tous droits réservés</p>
+        <p>Developpeur Web - OpenClassrooms</p>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/pagePanier.js"></script>
+  </div>
 </body>
 
 </html>
