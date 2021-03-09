@@ -1,34 +1,31 @@
-class ListeProduits{
-
+class ListeProduits {
   /**
    * [constructor description]
    *
-   * @param   {HTMLElement}  domTarget  [domTarget description]
-   *
    * @constructor
    */
-  constructor(domTarget){
-    this.domTarget = domTarget;
-    this.showPage();
-  }
+  constructor() {}
 
-  async showPage(){
-    let html = "<h2>Votre magasin en ligne d'ours en peluche faits à la main</h2>";
-    try{
-      const liste = await dataManager.getAllDataFronServer();
+  async html() {
+    let html = "";
+    /**
+     * Gère les erreurs. Si récupération des teddies depuis le serveur et la fonction (for) appelée depuis le bloc try renvoie une exception, le contrôle sera immédiatement passé à la clause catch
+     */
+    try {
+      const liste = await dataManager.getAllTeddies();
       let article;
-      for( let i=0, size=liste.length; i<size; i++){
-        article = new Article(liste[i])
+      for (let i = 0, size = liste.length; i < size; i++) {
+        article = new Article(liste[i]);
         html += article.afficheResume();
       }
-    }
-    catch(err){
+    } catch (err) {
+      /**
+       * La clause catch qui prend en paramètre (err) affichera à l'utilisateur qu'il y'a problème de connexion au serveur.
+       */
       console.error(err);
-      html +="problème de connexion au serveur";
+      html += "problème de connexion au serveur";
     }
-    this.domTarget.innerHTML = html;
+
+    return html;
   }
 }
-
-
-

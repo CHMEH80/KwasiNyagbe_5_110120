@@ -1,14 +1,16 @@
- /* Éléments généraux de la page */
+/* Éléments généraux de la page */
 
- body{
-  font-family: 'Raleway', sans-serif;
- }
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #f6f6f6;
+}
 
+/* Header */
 
- /* Header */
-
- .header {
+.header {
   display: flex;
+  border-bottom-style: groove;
+  background-color: #eaeaea;
 }
 
 nav ul li {
@@ -19,14 +21,16 @@ ul.header-navigation {
   margin-left: -21px;
 }
 
-a.nav-link {
-  border: solid 1.2px #A58B35;
+/* a.nav-link */
+
+.fas.fa-shopping-basket {
+  border: solid 1.2px #a58b35;
   padding: 4px;
   border-radius: 2rem;
   background-color: #f8f8f8;
 }
 
-nav a{
+nav a {
   text-decoration: none;
 }
 
@@ -38,80 +42,148 @@ h1.orinoco_peluches {
   text-align: center;
 }
 
-section#listeProduit a, p, h3 {
+section#listeProduit a,
+p,
+h3,
+price,
+select {
   margin-left: 1rem;
 }
-section#listeProduit a{
-   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
-    background: linear-gradient(172deg, #ff79da 21%, #A58B35 79%);
-    color: #fff;
-    border: none;
-    width: 50%;
-    height: 3rem;
-    border-radius: .2rem .2rem;
-    cursor: pointer;
-    position: relative;
-    transition-duration: 2s;
-    left: 10rem;
-    bottom: 2rem;
-    text-decoration: none;
-    padding: .3rem;
+
+section#listeProduit a {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+  background: linear-gradient(172deg, #ff79da 21%, #a58b35 79%);
+  color: #fff;
+  border: none;
+  width: 50%;
+  height: 3rem;
+  border-radius: 0.2rem 0.2rem;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 2s;
+  text-decoration: none;
+  padding: 0.3rem;
 }
 
 article {
   width: 100%;
   margin-bottom: 2rem;
+  margin-right: 0.5rem;
   box-shadow: 2px 1px 5px 2px #d1d1d1;
+}
+
+section#listeProduit {
+  width: 100%;
 }
 
 article img {
   width: 100%;
+  border-bottom: 1px solid #d1d1d1;
 }
 
 /* Section Fiche produit */
 
-
-section#detailProduit{
+section#detailProduit {
   width: 100%;
   margin-bottom: 2rem;
   box-shadow: 2px 1px 5px 2px #d1d1d1;
 }
 
-section#detailProduit img{
+section#detailProduit img {
   width: 100%;
+  border-bottom: 1px solid #d1d1d1;
 }
 
 select#choix_option {
   margin-left: 1rem;
+  width: 38%;
 }
 
-button{
+button {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
-  background: linear-gradient(172deg, #ff79da 21%, #A58B35 79%);
+  background: linear-gradient(172deg, #ff79da 21%, #a58b35 79%);
   color: #fff;
   border: none;
   height: 1.5rem;
-  border-radius: .2rem .2rem;
+  border-radius: 0.2rem 0.2rem;
+  display: block;
   cursor: pointer;
   position: relative;
   text-decoration: none;
   margin: 1rem;
+  left: 10rem;
+  bottom: 3rem;
 }
 
+button#ajout_panier {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+  background: linear-gradient(172deg, #ff79da 21%, #a58b35 79%);
+  color: #fff;
+  border: none;
+  height: 1.5rem;
+  border-radius: 0.2rem 0.2rem;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  margin: 1rem;
+  font-size: 0.8rem;
+  bottom: 3.4rem;
+  width: 38%;
+}
+
+button#commander {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+  background: linear-gradient(172deg, #ff79da 21%, #a58b35 79%);
+  color: #fff;
+  border: none;
+  height: 1.5rem;
+  border-radius: 0.2rem 0.2rem;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  margin: 1rem;
+  font-size: 0.8rem;
+  width: 38%;
+  left: 3rem;
+  top: 0.2rem;
+}
+.detail img {
+  width: 100%;
+}
+
+img.photo_article {
+  width: 50%;
+}
 
 main .detail_contenant .detail_information_prix .detail_prix {
   font-size: 1.6rem;
+}
+.detail_information_prix {
+  margin-left: 1rem;
+  font-weight: bold;
+}
+.detail_nom,
+price {
+  font-weight: bold;
+}
+
+p.detail_description {
+  width: 90%;
 }
 
 #listeProduit h2 {
   text-align: center;
 }
 
-.produit_nom, .produit_prix {
+.produit_nom,
+.produit_prix {
   width: 30%;
 }
 
-#choix_option, #ajout_panier {
+#choix_option,
+#ajout_panier {
   margin-bottom: 1rem;
   width: 95%;
 }
@@ -123,16 +195,7 @@ main .detail_contenant .detail_information_prix .detail_prix {
   cursor: pointer;
 }
 
-
 /* CSS Page panier */
-
-/* table{
-  width: 100%;
-}
-
-img.photo_article {
-  width: 100%;
-} */
 
 table {
   width: 100%;
@@ -144,15 +207,22 @@ table {
   width: 67%;
 }
 
-.formulaire_commande, .recapitulatif {
+.formulaire_commande {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.recapitulatif {
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .formulaire_commande {
-  border-top: 3px solid;
+  border-top: 3px solid grey;
+  border-bottom-style: groove;
 }
 
 .commander {
@@ -177,14 +247,14 @@ table {
 
 form {
   width: auto;
-  border: 1px solid #ff79da ;
+  border: 1px solid #ff79da;
   margin-bottom: 3rem;
   background-color: #f8f8f8;
 }
 
 .form-group {
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   display: flex;
   flex-direction: column;
 }
@@ -214,37 +284,19 @@ input:focus:invalid {
   margin: auto;
 }
 
-#panier-recap, #confirmation-recap {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  align-content: center;
-  vertical-align: middle;
-  background-color: #f8f8f8;
-  /* border-top: 1px solid #835038;
-  border-bottom: 1px solid #835038; */
-}
-
-#colonneTotal, #sommeTotal, #colonneConfirmTotal, #sommeConfirmTotal {
+#colonneTotal,
+#sommeTotal,
+#colonneConfirmTotal,
+#sommeConfirmTotal {
   border-top: 1px solid #ff79da;
-  /* background-color: #f5e6c6; */
-  font-size: 1.2rem;
+  font-size: 0.7rem;
 }
 
-.photo_article {
-  width: 10rem;
-}
-
-.photo_article_acheté {
-  width: 7rem;
-}
-
-
-td, th{
-  font-size: 1.2rem;
+td,
+th {
+  font-size: 0.7rem;
   background-color: #f8f8f8;
+  width: 0.7rem;
 }
 
 .confirmation h2 {
@@ -255,11 +307,26 @@ td, th{
   font-size: 1.3rem;
 }
 
-#orderId {
-  color: #0bb30b;
+section.confirmation {
+  text-align: center;
 }
 
-.footer {
+span#idArea,
+span#montant {
+  font-weight: bold;
+}
+
+footer {
+  border-top-style: groove;
+}
+.footer,
+footer p {
   text-align: center;
   font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+footer a {
+  text-decoration: none;
+  margin-right: 1rem;
 }

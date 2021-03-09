@@ -1,6 +1,0 @@
-
-// detailTeddies();
-
-// ajoutPanier();
-
-// nombreProduitPanier();

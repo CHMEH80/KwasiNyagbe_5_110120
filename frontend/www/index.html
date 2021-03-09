@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
@@ -7,7 +8,7 @@
     <meta name="description" content="Vente en ligne d'ours en peluche Ours faits à la main made in Frane." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="robots" content="all" />
-    <meta property="og:title" content="Ours en peluche faits à la  main - Orinoco" />
+    <meta property="og:title" content="Ours en peluche faits à la main - Orinoco" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
@@ -15,20 +16,22 @@
     <meta property="og:site_name" content="Orinoco" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/breakPoints.css" />
-
     <title>Ours en peluche faits à la main- Orinoco</title>
 
-    <!-- <script src="js/procedural/panier.js"></script> -->
-
     <!-- composants -->
-    <script src="js/components/article.js"></script>
+    <script src="js/components/article.js" defer></script>
+    <script src="js/components/produit.js" defer></script>
+    <script src="js/components/cart.js" defer></script>
 
     <!-- pages -->
-    <script src="js/pages/listeProduits.js"></script>
-    <script src="js/pages/ficheProduit.js"></script>
+    <script src="js/pages/listeProduits.js" defer></script>
+    <script src="js/pages/ficheProduit.js" defer></script>
+    <script src="js/pages/panier.js" defer></script>
+    <script src="js/pages/confirmation.js" defer></script>
 
     <!-- éléments structurants -->
-    <script src="js/dataManager.js"></script>
+    <script src="js/pageManager.js" defer></script>
+    <script src="js/dataManager.js" defer></script>
     <script src="js/main.js" defer></script>
 
 </head>
@@ -44,9 +47,6 @@
                     <div class="header-lien">
                         <ul class="header-navigation">
                             <li class="nav-item">
-                                <a class="nav-link" href="pagepanier.html"><i
-                                        class="fas fa-shopping-basket"></i>Panier (<span
-                                        id="indexPanier"></span>)</a>
                             </li>
                         </ul>
                     </div>
@@ -57,7 +57,7 @@
         <main>
             <section class="banniere-presentation">
                 <h1 class="orinoco_peluches">
-                    Vente en ligne d'ours en peluche à la main
+                    Vente en ligne d'ours en peluche faits à la main
                 </h1>
             </section>
 
@@ -67,14 +67,12 @@
         </main>
         <footer>
             <div class="footer">
-         
-                <p>Copyright © 2021 Orinoco - Tous droits réservés</p>
-                <p>Developpeur Web - OpenClassrooms</p>
+                <a href="#">Mentions légales</a>
+                <a href="mailto:contact@orinoco.com">Contact</a>
             </div>
+            <p>Copyright © 2021 Orinoco - Tous droits réservés</p>
         </footer>
-        <script src="js/main.js"></script>
-        <script src="js/index.js"></script>
-        
+
     </div>
 </body>
 

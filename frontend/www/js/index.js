@@ -1,5 +1,0 @@
-
-        //   teddies();
-      
-        // nombreIndexPanier();
-    

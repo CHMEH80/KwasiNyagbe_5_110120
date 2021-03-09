@@ -1,22 +1,185 @@
-@media screen and (min-width: 768px){
-   
-    a.nav-link {
-        margin-left: 24rem;
-    }
-   
-    section#listeProduit a {
-        left: 35rem;
-    }
-    /* section#listeProduit a, p, h3 {
-        margin-left: initial;
-    } */
-    
-    .formulaire_commande, .recapitulatif {
-        width: 100%;
-    }
+@media screen and (min-width: 768px) {
+  header img {
+    margin-left: 2rem;
+  }
 
-    .detail_information_prix {
-        width: 27%;
-    }
-   
+  .fas.fa-shopping-basket {
+    margin-left: 24rem;
+  }
+
+  a.nav-link {
+    margin-left: 24rem;
+  }
+
+  .photo_article {
+    width: 10rem;
+  }
+
+  img.photo_article {
+    width: 100%;
+  }
+
+  td,
+  th {
+    font-size: 1.2rem;
+    width: 1.2rem;
+  }
+
+  #colonneTotal,
+  #sommeTotal,
+  #colonneConfirmTotal,
+  #sommeConfirmTotal {
+    font-size: 1.2rem;
+  }
+
+  section#listeProduit {
+    width: 50%;
+    margin-left: 11.5rem;
+  }
+
+  section#detailProduit {
+    width: 55%;
+    margin-left: 10.2rem;
+  }
+
+  .detail_information_prix {
+    width: 27%;
+  }
+
+  .recapitulatif {
+    margin-bottom: 2rem;
+    width: 150%;
+    margin-left: -5rem;
+  }
+
+  .formulaire_commande {
+    width: 143%;
+    margin-left: -5rem;
+  }
+
+  .form-group {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  button#ajout_panier {
+    left: 12rem;
+    top: -3.5rem;
+  }
+
+  button#commander {
+    left: 6rem;
+    top: 0rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .fas.fa-shopping-basket {
+    margin-left: 41rem;
+  }
+
+  section#listeProduit {
+    width: 100%;
+    display: flex;
+    margin-left: 0rem;
+  }
+
+  .detail {
+    width: 30%;
+    margin-left: 23rem;
+  }
+
+  section#detailProduit {
+    width: 55%;
+    margin-left: 14.2rem;
+  }
+
+  .formulaire_commande {
+    border-top: initial;
+    margin: 0;
+  }
+
+  .recapitulatif {
+    width: 120%;
+    margin-left: 0rem;
+  }
+
+  button {
+    width: 80%;
+    left: 0rem;
+    bottom: rem;
+    top: 0rem;
+  }
+
+  button#ajout_panier {
+    left: 14rem;
+  }
+
+  section#confirmation {
+    margin-left: 7rem;
+    width: 400%;
+  }
+
+  section#listeProduit a {
+    left: -24rem;
+    top: 16rem;
+  }
+
+  button#commander {
+    left: 13rem;
+  }
+}
+
+footer {
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 1280px) {
+  header img {
+    margin-left: 5rem;
+  }
+
+  .fas.fa-shopping-basket {
+    margin-left: 60rem;
+  }
+
+  article {
+    margin-right: 2rem;
+  }
+
+  section#listeProduit {
+    margin-left: 1.1rem;
+  }
+
+  .detail {
+    margin-left: 30rem;
+  }
+
+  section#detailProduit {
+    width: 55%;
+    margin-left: 21.2rem;
+  }
+
+  section#listeProduit a {
+    left: -38rem;
+  }
+
+  .formulaire_commande {
+    border-bottom-style: initial;
+  }
+
+  button {
+    left: 0rem;
+    bottom: rem;
+    top: 0rem;
+  }
+
+  button#ajout_panier {
+    left: 20rem;
+  }
+
+  button#commander {
+    left: 26rem;
+    width: 20%;
+  }
 }
